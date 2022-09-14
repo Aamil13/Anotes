@@ -1,0 +1,14 @@
+@media all  and (max-width: 480px){
+    .medi{
+        background-color: red;
+        display: flex;
+        flex-direction: column;
+        
+    }
+
+    .smform{
+        
+        display: none;
+        justify-content: center;
+    }
+}
