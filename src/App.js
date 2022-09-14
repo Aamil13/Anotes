@@ -1,4 +1,4 @@
-import Navv from './Component/Navbar/Nav'
+
 import Home from './Pages/Home';
 
 
