@@ -26,6 +26,9 @@ const Navv = ({setShowModal , data, setData, refresher}) => {
     // window.location.reload();
     refresher();
   }
+  
+ 
+  
 
   const sorter = (value) =>{
     if(value === 'latest'){
@@ -61,7 +64,7 @@ const Navv = ({setShowModal , data, setData, refresher}) => {
    
     <Navbar key={expand} bg="light" expand={expand} className="mb-3">
     <Container fluid>
-      <Navbar.Brand href="#">ANotes</Navbar.Brand>
+      <Navbar.Brand >ANotes</Navbar.Brand>
       <Navbar.Toggle aria-controls={`offcanvasNavbar-expand-${expand}`} />
       <Navbar.Offcanvas
         id={`offcanvasNavbar-expand-${expand}`}
@@ -75,21 +78,21 @@ const Navv = ({setShowModal , data, setData, refresher}) => {
         </Offcanvas.Header>
         <Offcanvas.Body>
           <Nav className="justify-content-end flex-grow-1 pe-3">
-          <Nav.Link href="#action1" className='text-success mt-1' onClick={()=>{setShowModal(true)}}><BiMessageAltAdd size={40}/></Nav.Link>
-            <Nav.Link href="#action2" className='text-danger' onClick={DeleteAll}><MdDeleteForever size={40}/></Nav.Link>
+          <Nav.Link  className='text-success mt-1' onClick={()=>{setShowModal(true)}}><BiMessageAltAdd size={40}/></Nav.Link>
+            <Nav.Link  className='text-danger' onClick={DeleteAll}><MdDeleteForever size={40}/></Nav.Link>
             <NavDropdown
               title="Priority"
               id={`offcanvasNavbarDropdown-expand-${expand}`}
             >
-              <NavDropdown.Item href="#action3" onClick={()=>sorter('latest')}>Latest</NavDropdown.Item>
-              <NavDropdown.Item href="#action4" onClick={()=>sorter('oldest')}>
+              <NavDropdown.Item  onClick={()=>sorter('latest')}>Latest</NavDropdown.Item>
+              <NavDropdown.Item  onClick={()=>sorter('oldest')}>
                 Oldest
               </NavDropdown.Item>
               <NavDropdown.Divider />
-              <NavDropdown.Item href="#action5" onClick={()=>sorter('high')}>
+              <NavDropdown.Item  onClick={()=>sorter('high')}>
                 High
               </NavDropdown.Item>
-              <NavDropdown.Item href="#action6" onClick={()=>sorter('normal')}>
+              <NavDropdown.Item  onClick={()=>sorter('normal')}>
                 Normal
               </NavDropdown.Item>
             </NavDropdown>

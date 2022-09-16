@@ -14,15 +14,16 @@ const Home = () => {
   }, [])
 
   const refresher = ()=>{
-    setData(JSON.parse(localStorage.getItem('myNotes')) || [])
+    setData(JSON.parse(localStorage.getItem('mynotes')) || [])
 }
   
+
 
   return (
     <>
       <Nav setShowModal={setShowModal} data={data} setData={setData} refresher={refresher} />
       {showModal && 
-      <Modall showModal={showModal} setShowModal={setShowModal} refresher={refresher}/>
+      <Modall showModal={showModal} data={data} setShowModal={setShowModal} refresher={refresher} />
       }
 
       <div className='row justify-content-between mx-0 p-5'>
